@@ -41,7 +41,6 @@ La información fue organizada en una tabla con campos como:
 - longitud
 - sitio web
 - teléfono
-- imagen de referencia
 - información para ventanas emergentes del mapa
 
 Los datos de contacto fueron complementados mediante revisión de sitios institucionales, páginas oficiales y fuentes disponibles en línea.
@@ -69,39 +68,9 @@ En QGIS, la importación de la tabla debe realizarse con:
 - **Campo X:** longitud
 - **Campo Y:** latitud
 
-## Estructura recomendada del repositorio
 
-```text
-/
-├── index.html
-├── README.md
-├── data/
-│   ├── museos_galerias.geojson
-│   └── cantones.geojson
-├── js/
-├── css/
-├── legend/
-├── images/
-│   └── captura_mapa.png
-└── documentos/
-    ├── tabla_museos_galerias.xlsx
-    └── tabla_museos_galerias.csv
-```
 
-> Nota: la estructura puede variar según la forma en que qgis2web exporte el proyecto. Lo importante es mantener el archivo `index.html` en la raíz del repositorio y conservar las carpetas generadas por qgis2web.
 
-## Archivos principales
-
-| Archivo o carpeta | Descripción |
-|---|---|
-| `index.html` | Archivo principal del mapa interactivo. |
-| `data/` | Carpeta con las capas geográficas exportadas. |
-| `js/` | Scripts necesarios para el funcionamiento del mapa. |
-| `css/` | Estilos visuales del mapa. |
-| `legend/` | Elementos gráficos de la leyenda, si fueron generados. |
-| `images/` | Imágenes usadas para documentación o ventanas emergentes. |
-| `documentos/` | Tablas base utilizadas para construir el mapa. |
-| `README.md` | Descripción general del proyecto y metodología. |
 
 ## Visualización del mapa
 
@@ -110,42 +79,11 @@ El mapa puede abrirse directamente desde el archivo:
 ```text
 index.html
 ```
+o visitando el sitio web: [el sitio web: (https://adocr.github.io/mapa-museos-galerias-gam/)
 
-También puede publicarse mediante GitHub Pages.
 
-### Enlace al mapa interactivo
 
-Agregar aquí el enlace cuando el repositorio esté publicado:
 
-```text
-https://USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/
-```
-
-## Instrucciones para publicar en GitHub Pages
-
-1. Crear un repositorio en GitHub.
-2. Subir todos los archivos exportados por qgis2web.
-3. Verificar que `index.html` esté en la raíz del repositorio.
-4. Entrar a **Settings**.
-5. Ir a **Pages**.
-6. En **Branch**, seleccionar `main`.
-7. Seleccionar la carpeta `/root`.
-8. Guardar los cambios.
-9. Esperar a que GitHub genere el enlace del sitio.
-
-## Créditos y atribución
-
-Los datos geográficos base provienen de OpenStreetMap. Se debe incluir la atribución correspondiente:
-
-**Datos geográficos: © OpenStreetMap contributors**
-
-El mapa fue procesado y diseñado en QGIS, y exportado como mapa interactivo mediante qgis2web.
-
-## Limitaciones
-
-Algunos registros pueden presentar campos incompletos, especialmente en sitio web, teléfono o imagen. Por esta razón, se recomienda revisar cada dato antes de usar el mapa como fuente definitiva de consulta pública.
-
-También puede existir diferencia entre la información disponible en OpenStreetMap y los datos oficiales de cada institución cultural.
 
 ## Autoría
 
@@ -155,7 +93,7 @@ Proyecto elaborado por:
 
 Curso:
 
-**Antropología y herramientas tecnológicas**
+**SP-6095 Antropología en la era digital: Herramientaspara la investigación y la representación.**
 
 Año:
 
