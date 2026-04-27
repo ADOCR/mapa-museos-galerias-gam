@@ -37,12 +37,12 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/Division_territorialsimplificadox2_0.js"></script>
-        <script src="data/Museosysalas_definitivo_1.js"></script>
+        <script src="data/Division_territorialsimplificadox2_1.js"></script>
+        <script src="data/Museosysalas_definitivo_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[9.7870682575,-84.42308748078604],[10.2240044425,-83.72031951921396]]);
+        }).fitBounds([[9.614971939458005,-84.6170058103377],[10.488844309458006,-83.21146988719354]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -124,7 +124,20 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_Division_territorialsimplificadox2_0(feature, layer) {
+        map.createPane('pane_GoogleSatellite_0');
+        map.getPane('pane_GoogleSatellite_0').style.zIndex = 400;
+        var layer_GoogleSatellite_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatellite_0',
+            opacity: 1.0,
+            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 20
+        });
+        layer_GoogleSatellite_0;
+        map.addLayer(layer_GoogleSatellite_0);
+        function pop_Division_territorialsimplificadox2_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['CANTÓN'] !== null ? autolinker.link(String(feature.properties['CANTÓN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -140,130 +153,130 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Division_territorialsimplificadox2_0_0(feature) {
+        function style_Division_territorialsimplificadox2_1_0(feature) {
             switch(String(feature.properties['PROVINCIA'])) {
                 case 'Alajuela':
                     return {
-                pane: 'pane_Division_territorialsimplificadox2_0',
+                pane: 'pane_Division_territorialsimplificadox2_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.723)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(212,119,111,1.0)',
+                fillColor: 'rgba(212,119,111,0.723)',
                 interactive: true,
             }
                     break;
                 case 'Cartago':
                     return {
-                pane: 'pane_Division_territorialsimplificadox2_0',
+                pane: 'pane_Division_territorialsimplificadox2_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.723)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(212,112,179,1.0)',
+                fillColor: 'rgba(212,112,179,0.723)',
                 interactive: true,
             }
                     break;
                 case 'Guanacaste':
                     return {
-                pane: 'pane_Division_territorialsimplificadox2_0',
+                pane: 'pane_Division_territorialsimplificadox2_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.723)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(66,206,222,1.0)',
+                fillColor: 'rgba(66,206,222,0.723)',
                 interactive: true,
             }
                     break;
                 case 'Heredia':
                     return {
-                pane: 'pane_Division_territorialsimplificadox2_0',
+                pane: 'pane_Division_territorialsimplificadox2_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.723)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(128,238,166,1.0)',
+                fillColor: 'rgba(128,238,166,0.723)',
                 interactive: true,
             }
                     break;
                 case 'Limón':
                     return {
-                pane: 'pane_Division_territorialsimplificadox2_0',
+                pane: 'pane_Division_territorialsimplificadox2_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.723)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(177,100,233,1.0)',
+                fillColor: 'rgba(177,100,233,0.723)',
                 interactive: true,
             }
                     break;
                 case 'Puntarenas':
                     return {
-                pane: 'pane_Division_territorialsimplificadox2_0',
+                pane: 'pane_Division_territorialsimplificadox2_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.723)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(122,226,53,1.0)',
+                fillColor: 'rgba(122,226,53,0.723)',
                 interactive: true,
             }
                     break;
                 case 'San José':
                     return {
-                pane: 'pane_Division_territorialsimplificadox2_0',
+                pane: 'pane_Division_territorialsimplificadox2_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.723)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(65,102,202,1.0)',
+                fillColor: 'rgba(65,102,202,0.723)',
                 interactive: true,
             }
                     break;
             }
         }
-        map.createPane('pane_Division_territorialsimplificadox2_0');
-        map.getPane('pane_Division_territorialsimplificadox2_0').style.zIndex = 400;
-        map.getPane('pane_Division_territorialsimplificadox2_0').style['mix-blend-mode'] = 'normal';
-        var layer_Division_territorialsimplificadox2_0 = new L.geoJson(json_Division_territorialsimplificadox2_0, {
+        map.createPane('pane_Division_territorialsimplificadox2_1');
+        map.getPane('pane_Division_territorialsimplificadox2_1').style.zIndex = 401;
+        map.getPane('pane_Division_territorialsimplificadox2_1').style['mix-blend-mode'] = 'normal';
+        var layer_Division_territorialsimplificadox2_1 = new L.geoJson(json_Division_territorialsimplificadox2_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Division_territorialsimplificadox2_0',
-            layerName: 'layer_Division_territorialsimplificadox2_0',
-            pane: 'pane_Division_territorialsimplificadox2_0',
-            onEachFeature: pop_Division_territorialsimplificadox2_0,
-            style: style_Division_territorialsimplificadox2_0_0,
+            dataVar: 'json_Division_territorialsimplificadox2_1',
+            layerName: 'layer_Division_territorialsimplificadox2_1',
+            pane: 'pane_Division_territorialsimplificadox2_1',
+            onEachFeature: pop_Division_territorialsimplificadox2_1,
+            style: style_Division_territorialsimplificadox2_1_0,
         });
-        bounds_group.addLayer(layer_Division_territorialsimplificadox2_0);
-        map.addLayer(layer_Division_territorialsimplificadox2_0);
-        function pop_Museosysalas_definitivo_1(feature, layer) {
+        bounds_group.addLayer(layer_Division_territorialsimplificadox2_1);
+        map.addLayer(layer_Division_territorialsimplificadox2_1);
+        function pop_Museosysalas_definitivo_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">nombre</th>\
@@ -297,11 +310,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Museosysalas_definitivo_1_0(feature) {
+        function style_Museosysalas_definitivo_2_0(feature) {
             switch(String(feature.properties['tipo_gener'])) {
                 case 'Galería de arte':
                     return {
-                pane: 'pane_Museosysalas_definitivo_1',
+                pane: 'pane_Museosysalas_definitivo_2',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -317,7 +330,7 @@
                     break;
                 case 'Museo':
                     return {
-                pane: 'pane_Museosysalas_definitivo_1',
+                pane: 'pane_Museosysalas_definitivo_2',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -333,7 +346,7 @@
                     break;
                 case 'Museo / espacio cultural':
                     return {
-                pane: 'pane_Museosysalas_definitivo_1',
+                pane: 'pane_Museosysalas_definitivo_2',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -349,29 +362,30 @@
                     break;
             }
         }
-        map.createPane('pane_Museosysalas_definitivo_1');
-        map.getPane('pane_Museosysalas_definitivo_1').style.zIndex = 401;
-        map.getPane('pane_Museosysalas_definitivo_1').style['mix-blend-mode'] = 'normal';
-        var layer_Museosysalas_definitivo_1 = new L.geoJson(json_Museosysalas_definitivo_1, {
+        map.createPane('pane_Museosysalas_definitivo_2');
+        map.getPane('pane_Museosysalas_definitivo_2').style.zIndex = 402;
+        map.getPane('pane_Museosysalas_definitivo_2').style['mix-blend-mode'] = 'normal';
+        var layer_Museosysalas_definitivo_2 = new L.geoJson(json_Museosysalas_definitivo_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Museosysalas_definitivo_1',
-            layerName: 'layer_Museosysalas_definitivo_1',
-            pane: 'pane_Museosysalas_definitivo_1',
-            onEachFeature: pop_Museosysalas_definitivo_1,
+            dataVar: 'json_Museosysalas_definitivo_2',
+            layerName: 'layer_Museosysalas_definitivo_2',
+            pane: 'pane_Museosysalas_definitivo_2',
+            onEachFeature: pop_Museosysalas_definitivo_2,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Museosysalas_definitivo_1_0(feature));
+                return L.circleMarker(latlng, style_Museosysalas_definitivo_2_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Museosysalas_definitivo_1);
-        map.addLayer(layer_Museosysalas_definitivo_1);
+        bounds_group.addLayer(layer_Museosysalas_definitivo_2);
+        map.addLayer(layer_Museosysalas_definitivo_2);
         var overlaysTree = [
-            {label: 'Museos y salas_definitivo<br /><table><tr><td style="text-align: center;"><img src="legend/Museosysalas_definitivo_1_Galeríadearte0.png" /></td><td>Galería de arte</td></tr><tr><td style="text-align: center;"><img src="legend/Museosysalas_definitivo_1_Museo1.png" /></td><td>Museo</td></tr><tr><td style="text-align: center;"><img src="legend/Museosysalas_definitivo_1_Museoespaciocultural2.png" /></td><td>Museo / espacio cultural</td></tr></table>', layer: layer_Museosysalas_definitivo_1},
-            {label: 'Division_territorial simplificadox2<br /><table><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_0_Alajuela0.png" /></td><td>Alajuela</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_0_Cartago1.png" /></td><td>Cartago</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_0_Guanacaste2.png" /></td><td>Guanacaste</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_0_Heredia3.png" /></td><td>Heredia</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_0_Limón4.png" /></td><td>Limón</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_0_Puntarenas5.png" /></td><td>Puntarenas</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_0_SanJosé6.png" /></td><td>San José</td></tr></table>', layer: layer_Division_territorialsimplificadox2_0},]
+            {label: 'Museos y salas_definitivo<br /><table><tr><td style="text-align: center;"><img src="legend/Museosysalas_definitivo_2_Galeríadearte0.png" /></td><td>Galería de arte</td></tr><tr><td style="text-align: center;"><img src="legend/Museosysalas_definitivo_2_Museo1.png" /></td><td>Museo</td></tr><tr><td style="text-align: center;"><img src="legend/Museosysalas_definitivo_2_Museoespaciocultural2.png" /></td><td>Museo / espacio cultural</td></tr></table>', layer: layer_Museosysalas_definitivo_2},
+            {label: 'Division_territorial simplificadox2<br /><table><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_1_Alajuela0.png" /></td><td>Alajuela</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_1_Cartago1.png" /></td><td>Cartago</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_1_Guanacaste2.png" /></td><td>Guanacaste</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_1_Heredia3.png" /></td><td>Heredia</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_1_Limón4.png" /></td><td>Limón</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_1_Puntarenas5.png" /></td><td>Puntarenas</td></tr><tr><td style="text-align: center;"><img src="legend/Division_territorialsimplificadox2_1_SanJosé6.png" /></td><td>San José</td></tr></table>', layer: layer_Division_territorialsimplificadox2_1},
+            {label: "Google Satellite", layer: layer_GoogleSatellite_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -384,27 +398,27 @@
         lay.addTo(map);
         setBounds();
         var i = 0;
-        layer_Division_territorialsimplificadox2_0.eachLayer(function(layer) {
+        layer_Division_territorialsimplificadox2_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['CANTÓN'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['CANTÓN']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Division_territorialsimplificadox2_0'});
+            layer.bindTooltip((layer.feature.properties['CANTÓN'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['CANTÓN']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Division_territorialsimplificadox2_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_Division_territorialsimplificadox2_0]);
+        resetLabels([layer_Division_territorialsimplificadox2_1]);
         map.on("zoomend", function(){
-            resetLabels([layer_Division_territorialsimplificadox2_0]);
+            resetLabels([layer_Division_territorialsimplificadox2_1]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Division_territorialsimplificadox2_0]);
+            resetLabels([layer_Division_territorialsimplificadox2_1]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Division_territorialsimplificadox2_0]);
+            resetLabels([layer_Division_territorialsimplificadox2_1]);
         });
         </script>        
     </body>
