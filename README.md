@@ -52,10 +52,11 @@ Los datos de contacto fueron complementados mediante revisión de sitios institu
 3. Los resultados fueron exportados en formato tabular.
 4. La tabla fue revisada y organizada para su uso en QGIS.
 5. Se añadieron campos complementarios como tipo de espacio, ciudad, sitio web, teléfono e imagen.
-6. La tabla fue importada en QGIS como capa de puntos usando coordenadas en WGS 84 / EPSG:4326.
-7. Se incorporó una capa de cantones para contextualizar territorialmente los espacios culturales.
-8. El mapa fue exportado como mapa interactivo mediante qgis2web.
-9. Los archivos resultantes fueron preparados para su publicación en GitHub.
+6. Los datos como sitio web y los faltantes de teléfono que no estaban en OSM fueron recolectados por agente programado de chatgpt 5.5 en funcion de pensamiento ampliado e investigacion profunda en version plus
+7. La tabla fue importada en QGIS como capa de puntos usando coordenadas en WGS 84 / EPSG:4326.
+8. Se incorporó una capa de cantones para contextualizar territorialmente los espacios culturales.
+9. El mapa fue exportado como mapa interactivo mediante qgis2web.
+10. Los archivos resultantes fueron preparados para su publicación en GitHub.
 
 ## Sistema de coordenadas
 
